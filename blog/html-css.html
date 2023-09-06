@@ -12,6 +12,255 @@
     <a href="../index.html">HomePage</a>
     <h1>html-css Blog</h1>
 
-    <!-- this is a comment. -->
+    <h2>What is the difference between Margin, Border, and Padding?</h2>
+    <p>
+      Margin controls the space around an element's border, border defines the border around an element's content and padding, while padding controls the space between an element's content and its border. Together, these properties allow you to precisely control the layout and spacing of elements on a web page.
+    </p><br>
+    <img class="img" src="../img/relation.png" alt="How margin, padding and border define the spacing and layout of elements">
+    <p>
+      For instance:
+    </p>
+
+    HTML:
+    <div class="code-block">
+      <pre>
+        <code>
+          &lth5 class="injected-text"&gtmargin&lt/h5&gt
+
+          &ltdiv class="box yellow-box"&gt
+          &lth5 class="box red-box"&gtpadding&lt/h5&gt
+          &lth5 class="box blue-box"&gtpadding&lt/h5&gt
+          &lt/div&gt       
+        </code>
+      </pre>
+    </div>
+    CSS:
+    <div class="code-block">
+      <pre>
+        <code>
+          &ltstyle&gt
+            .injected-text {
+              margin-bottom: -25px;
+              text-align: center;
+            }
+
+            .box {
+              border-style: solid;
+              border-color: black;
+              border-width: 5px;
+              text-align: center;
+            }
+
+            .yellow-box {
+              background-color: yellow;
+              padding: 10px;
+            }
+
+            .red-box {
+              background-color: crimson;
+              color: #fff;
+              padding: 20px;
+            }
+
+            .blue-box {
+              background-color: blue;
+              color: #fff;
+              padding: 10px;
+            }
+          &lt/style&gt     
+        </code>
+      </pre>
+    </div>
+    Rendered:<br><br>
+    <img class="Rendered" src="../img/margin-padding-border.png" alt="How margin, padding and border define the spacing and layout of elements">
+    <p>
+      There are 3 boxes: red, blue and yellow. Each background color area is filled by padding; Black color border is their border; The yellow color area between the border of red box and the border of yellow box and/or the border of blue box is defined by the margin value of red box.
+    </p>
+
+    <h3>When to use Margin?</h3>
+    <p>
+      You need to use Margin when controlling the transparent space outside an element's border. Margin create space between the element and other elements on the page.
+    </p>
+    <h3>How to use Margin?</h3>
+    <p>
+      There are 4 types of Margin:
+    </p>
+    <div class="code-block">
+      <code>margin-top</code><br><code>margin-right</code><br><code>margin-bottom</code><br><code>margin-left</code>
+    </div>
+    <p>
+      Margin values can be set individually for each side of the element. You can define 4 directions' margin value of one box element accordingly.
+    </p>
+    <!-- CSS:
+    <div class="code-block">
+      <pre>
+        .box {
+          margin: 10px; /* Applies 10px margin to all sides */
+          margin-top: 20px; /* Overrides the top margin to 20px */
+          margin-right: 20px; /* Overrides the right margin to 20px */
+          margin-bottom: 20px; /* Overrides the bottom margin to 20px */
+          margin-left: 20px; /* Overrides the left margin to 20px */
+        }        
+      </pre>
+    </div> -->
+
+    <p>
+      HTML:
+      <div class="code-block">
+        <pre>
+          &ltdiv class="box"&gt
+            &ltp&gt
+              This is a box
+            &lt/p&gt
+          &lt/div&gt
+        </pre>
+      </div>
+      CSS:
+      <div class="code-block">
+        <pre>
+          .box {
+            
+          }
+        </pre>
+      </div>
+      Rendered:<br><br>
+      <img class="Rendered" src="../img/border.png" alt="A HTML box with border"><br>
+    
+    <h3>When to use Border?</h3>
+    <p>
+      When you want to create border around an HTML element.
+    </p>
+    <h3>How to use Border?</h3>
+    <p>
+      CSS borders have properties like:<br>
+      <code>border-color</code><br><code>border-width</code><br><code>border-style</code><br><code>border-radius</code><br><code>border-top</code>
+    </p>
+    <p>
+      HTML:
+      <div class="code-block">
+        <pre>
+          &ltdiv class="box"&gt
+            &ltp&gt
+              This is a box
+            &lt/p&gt
+          &lt/div&gt
+        </pre>
+      </div>
+      CSS:
+      <div class="code-block">
+        <pre>
+          .box {
+            text-align: center;
+            font-size: 40px;
+            color: white;
+            background-color: red;
+            margin-left: 800px;
+            margin-right: 800px;
+            margin-top: 200px;
+            
+            border: 10px solid #000;
+          }
+        </pre>
+      </div>
+      Rendered:<br><br>
+      <img class="Rendered" src="../img/border.png" alt="A HTML box with border"><br>
+      CSS:
+      <div class="code-block">
+        <pre>
+          .box {
+            text-align: center;
+            font-size: 40px;
+            color: white;
+            background-color: red;
+            margin-left: 800px;
+            margin-right: 800px;
+            margin-top: 200px;
+
+            border: 10px solid #000;
+            border-radius: 50%;
+          }
+        </pre>
+      </div>
+      Rendered:<br><br>
+      <img class="Rendered" src="../img/border-radius.png" alt="A HTML box with border-radius"><br>
+
+    </p>
+    <h3>When to use Padding</h3>
+    <p>
+      Padding is the transparent space between an element's content and its border. It defines the inner spacing within an element and affects the content's position inside the element.
+    </p>
+    <h3>How to use Padding</h3>
+    <p>
+      CSS padding have properties like:<br>
+      <code>padding-top</code><br><code>padding-right</code><br><code>padding-bottom</code><br><code>padding-left</code>
+    </p>
+    <p>
+      HTML:
+      <div class="code-block">
+        <pre>
+          &ltdiv class="box"&gt
+            &ltp&gt
+              This is a box
+            &lt/p&gt
+          &lt/div&gt
+        </pre>
+      </div>
+      CSS:
+      <div class="code-block">
+        <pre>
+          .box {
+            text-align: center;
+            font-size: 40px;
+            color: white;
+            background-color: red;
+            margin-left: 800px;
+            margin-right: 800px;
+            margin-top: 200px;
+
+            padding: 20px; /*set padding 20px for all sides*/
+          }
+        </pre>
+      </div>
+      Rendered:<br><br>
+      <img class="Rendered" src="../img/padding.png" alt="A HTML box with padding: 20px"><br>
+
+      CSS:
+      <div class="code-block">
+        <pre>
+          .box {
+            text-align: center;
+            font-size: 40px;
+            color: white;
+            background-color: red;
+            margin-left: 800px;
+            margin-right: 800px;
+            margin-top: 200px;
+
+            padding-top: 20px; /*set padding 20px for top side*/
+          }
+        </pre>
+      </div>
+      Rendered:<br><br>
+      <img class="Rendered" src="../img/padding-top.png" alt="A HTML box with padding: 20px"><br>
+
+      CSS:
+      <div class="code-block">
+        <pre>
+          .box {
+            text-align: center;
+            font-size: 40px;
+            color: white;
+            background-color: red;
+            margin-left: 800px;
+            margin-right: 800px;
+            margin-top: 200px;
+
+            padding-right: 20px; /*set padding 20px for right side*/
+          }
+        </pre>
+      </div>
+      Rendered:<br><br>
+      <img class="Rendered" src="../img/padding-right.png" alt="A HTML box with padding: 20px"><br>
+    <a href="../index.html">HomePage</a>
   </body>
 </html>
