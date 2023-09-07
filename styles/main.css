@@ -21,14 +21,18 @@ body {
   /* margin-top: 5%; */
 }
 
-.img {
+img {
   margin: 50px;
+  max-width: 100%;
+  height: auto;
 }
 
 .code-block {
   background-color: rgb(245, 231, 231);
   margin: 50px;
   width: fit-content;
+  max-width: 100%;
+  height: auto;
 }
 
 a:link {
@@ -57,4 +61,13 @@ a:link {
 
 #myBtn:hover {
   background-color: #c2ceb2; /* Add a dark-grey background on hover */
+}
+
+@media (max-width: 800px) {
+  body {
+    background-color: rgb(187, 230, 220);
+    height: 100vh;
+    display: grid;
+    width: 100vw;
+  }
 }
