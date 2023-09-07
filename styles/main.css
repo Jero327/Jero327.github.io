@@ -1,5 +1,24 @@
 body {
   background-color: bisque;
+  height: 100vh;
+  display: grid;
+}
+
+.header {
+  height: 120px;
+  text-align: center;
+  /* margin-bottom: 5%; */
+}
+
+.main {
+  grid: 1;
+  padding: 80px;
+}
+
+.footer {
+  height: 60px;
+  text-align: center;
+  /* margin-top: 5%; */
 }
 
 .img {
@@ -10,4 +29,32 @@ body {
   background-color: rgb(245, 231, 231);
   margin: 50px;
   width: fit-content;
+}
+
+a:link {
+  text-decoration: none;
+}
+
+.homepage:hover {
+  color: blueviolet;
+}
+
+#myBtn {
+  /* display: none; Hidden by default */
+  position: fixed; /* Fixed/sticky position */
+  bottom: 0px; /* Place the button at the bottom of the page */
+  right: 0px; /* Place the button 30px from the right */
+  z-index: 99; /* Make sure it does not overlap */
+  border: none; /* Remove borders */
+  outline: none; /* Remove outline */
+  background-color: rgb(55, 179, 168); /* Set a background color */
+  color: white; /* Text color */
+  cursor: pointer; /* Add a mouse pointer on hover */
+  padding: 15px; /* Some padding */
+  border-radius: 10px; /* Rounded corners */
+  font-size: 18px; /* Increase font size */
+}
+
+#myBtn:hover {
+  background-color: #c2ceb2; /* Add a dark-grey background on hover */
 }
