@@ -1,11 +1,12 @@
 body {
-  background-color: bisque;
+  /* background-color: bisque; */
   height: 100vh;
   display: grid;
 }
 
 .header {
-  height: 30px;
+  /* height: 130px; */
+  background-color: rgb(243, 247, 246);
   text-align: center;
 }
 
@@ -14,8 +15,11 @@ body {
 }
 
 .footer {
-  height: 10px;
+  height: 50px;
+  background-color: rgb(141, 172, 202);
   text-align: center;
+  align-items: center;
+  color: rgb(241, 245, 244);
 }
 
 h1:hover {
