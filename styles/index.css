@@ -1,16 +1,185 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
 body {
   /* background-color: bisque; */
-  height: 100vh;
-  display: grid;
+  height: 100%;
+  margin: 0;
+  /* display: grid; */
+  font-family: 'Lato';
+}
+
+.wrapper {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+a {
+  text-decoration: none;
+  color: white;
+}
+
+ul {
+  list-style-type: none;
+}
+
+img {
+  max-height: 100%;
+  width: auto;
+}
+
+button {
+  margin: 5px auto;
+  padding: 5px;
+  /* background-color: rgb(65, 64, 64); */
+  background-color: skyblue;
+  color: white;
+  border: none;
+}
+
+/* button:hover {
+  background-color: aqua;
+} */
+
+header {
+  background-color: rgb(39, 80, 141);
+  width: 100%;
 }
 
 .header {
   /* height: 130px; */
-  background-color: rgb(243, 247, 246);
-  text-align: center;
+  /* text-align: center; */
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  align-items: baseline;
+  margin: 0 200px;
 }
 
-.main {
+nav ul {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: flex-end;
+}
+
+.header a {
+  color: white;
+  display: block;
+  padding: 1em;
+  font-weight: bold;
+}
+
+nav a:hover {
+  background-color: aqua;
+}
+
+.about {
+  background-color: rgb(30, 131, 126);
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-evenly;
+  height: 400px;
+  align-items: center;
+  color: white;
+}
+
+.about button {
+  padding: 0.6em;
+  background-color: skyblue;
+}
+
+.blog-list {
+  background-color: rgb(188, 214, 214);
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-grow: 1;
+}
+
+.core a {
+  color: black;
+}
+
+.tech a {
+  color: black;
+}
+
+footer {
+  /* height: 130px; */
+  background-color: rgb(39, 80, 141);
+  /* text-align: center; */
+  /* display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  align-items: baseline; */
+  /* position: absolute;
+  bottom: 0; */
+  width: 100%;
+  color: white;
+  padding: 10px 0;
+}
+
+.contact-sitemap-logo {
+  margin: 0 300px;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-around;
+}
+
+.footer .copyright {
+  text-align: center;
+  /* background-color: rgb(39, 39, 39); */
+  background-color: rgb(39, 80, 141);
+}
+
+@media (max-width: 800px) {
+  .header {
+    justify-content: space-around;
+  }
+}
+
+@media (max-width: 400px) {
+  .header {
+    flex-flow: column wrap;
+    align-items: center;
+    /* padding: 0; */
+  }
+
+  nav ul {
+    flex-flow: column wrap;
+    /* padding: 0; */
+  }
+
+  nav a { 
+    text-align: center; 
+    padding: 0.5em;
+    /* padding: 10px; */
+    /* border-top: 1px solid rgba(255, 255, 255,0.3); */
+    border-bottom: 1px solid rgba(255, 255, 255,0.3);
+  }
+  nav a:last-of-type a {
+    border-bottom: none;
+  }
+}
+
+/* main
+.main
+.row
+.column-1
+.column-2 {
+  height: 100%;
+  margin: 0 auto;
+} */
+
+/* .main {
   grid: 100%;
 }
 
@@ -32,28 +201,38 @@ a:link {
 
 * {
   box-sizing: border-box;
-}
+} */
 
 /* Create two equal columns that floats next to each other */
+
+/* main {
+  height: 400px;
+  display: none;
+}
+
 .column-1 {
   background-color:#e9d8d8;
   float: left;
   width: 50%;
   padding: 10px;
-  height: 300px;
+  height: 100%;
 }
 
 .column-2 {
   background-color:#dbc7c7;
-  float: left;
+  float: right;
   width: 50%;
   padding: 10px;
-  height: 300px;
+  height: 100%;
 }
 
+.row a {
+  color: black;
+} */
+
 /* Clear floats after the columns */
-.row:after {
+/* .row:after {
   content: "";
   display: table;
   clear: both;
-}
+} */
